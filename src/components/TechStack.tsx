@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+
 import "./styles/TechStack.css";
 import {
   SiReact,
