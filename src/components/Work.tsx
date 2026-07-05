@@ -50,30 +50,30 @@ const Work = () => {
   }, []);
   const projects = [
     {
-      title: "Restaurant Ordering Platform",
+      title: "BiteFlow Ordering Engine",
       category: "Full-Stack Web Development",
-      tools: "Node.js, Express.js, Supabase, PostgreSQL, Vercel",
+      tools: "Node.js, Express.js, Supabase, PostgreSQL, Stripe integration, Vercel",
+      image: `${import.meta.env.BASE_URL}images/project_restaurant.jpg`,
+      link: "https://github.com/jeshikoJ"
+    },
+    {
+      title: "NovaCart Headless Commerce",
+      category: "Full-Stack Web Development",
+      tools: "Python, Django, MongoDB, AWS EC2/S3, Responsive Design",
       image: `${import.meta.env.BASE_URL}images/project_ecommerce.jpg`,
       link: "https://github.com/jeshikoJ"
     },
     {
-      title: "E-Commerce Web Application",
-      category: "Full-Stack Web Development",
-      tools: "Python, Django, MongoDB, AWS EC2, HTML5/CSS3",
-      image: `${import.meta.env.BASE_URL}images/project_ecommerce.jpg`,
-      link: "https://github.com/jeshikoJ"
-    },
-    {
-      title: "Machine Learning Prototypes",
+      title: "SynapseML Predictive Hub",
       category: "AI/ML & Data Engineering",
-      tools: "Python, scikit-learn, pandas, Data Processing",
+      tools: "Python, scikit-learn, pandas, Automated ETL Pipelines",
       image: `${import.meta.env.BASE_URL}images/project_ml.jpg`,
       link: "https://github.com/jeshikoJ"
     },
     {
-      title: "Modern 3D Portfolio",
+      title: "Aether3D Creative Portfolio",
       category: "Creative Development",
-      tools: "React, Vite, Three.js, GSAP, Tailwind CSS",
+      tools: "React, Vite, Three.js, WebGL Shaders, GSAP, CSS Grid",
       image: `${import.meta.env.BASE_URL}images/project_portfolio.jpg`,
       link: "https://github.com/jeshikoJ"
     }
@@ -97,8 +97,12 @@ const Work = () => {
                     <p>{project.category}</p>
                   </div>
                 </div>
-                <h4>Tools and features</h4>
-                <p>{project.tools}</p>
+                <h4>Tools & Tech Stack</h4>
+                <div className="work-tags-container">
+                  {project.tools.split(", ").map((tool, i) => (
+                    <span className="work-tag" key={i}>{tool}</span>
+                  ))}
+                </div>
               </div>
               <WorkImage image={project.image} alt={project.title} link={project.link} />
             </div>
