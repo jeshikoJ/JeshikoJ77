@@ -72,6 +72,7 @@
   line-height: 18px;
   font-weight: 200;
   letter-spacing: 0.7px;
+  margin: 10px 0;
 }
 .what-content h4 {
   font-weight: 300;
@@ -206,7 +207,11 @@
 }
 .what-content-in {
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.what-content-in::-webkit-scrollbar {
+  display: none;
 }
 .what-content-in h5 {
   font-weight: 300;
@@ -214,7 +219,7 @@
   font-size: 12px;
   letter-spacing: 1px;
   font-family: "Outfit", sans-serif;
-  margin-bottom: 5px;
+  margin: 12px 0 5px 0;
 }
 @keyframes whatBorders {
   80% {
