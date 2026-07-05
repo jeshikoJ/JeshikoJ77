@@ -54,28 +54,28 @@ const Work = () => {
       category: "Full-Stack Web Development",
       tools: "Node.js, Express.js, Supabase, PostgreSQL, Vercel",
       image: `${import.meta.env.BASE_URL}images/project_ecommerce.jpg`,
-      link: "https://github.com/JeshikoJ"
+      link: "https://github.com/jeshikoJ"
     },
     {
       title: "E-Commerce Web Application",
       category: "Full-Stack Web Development",
       tools: "Python, Django, MongoDB, AWS EC2, HTML5/CSS3",
       image: `${import.meta.env.BASE_URL}images/project_ecommerce.jpg`,
-      link: "https://github.com/JeshikoJ"
+      link: "https://github.com/jeshikoJ"
     },
     {
       title: "Machine Learning Prototypes",
       category: "AI/ML & Data Engineering",
       tools: "Python, scikit-learn, pandas, Data Processing",
       image: `${import.meta.env.BASE_URL}images/project_ml.jpg`,
-      link: "https://github.com/JeshikoJ"
+      link: "https://github.com/jeshikoJ"
     },
     {
       title: "Modern 3D Portfolio",
       category: "Creative Development",
       tools: "React, Vite, Three.js, GSAP, Tailwind CSS",
       image: `${import.meta.env.BASE_URL}images/project_portfolio.jpg`,
-      link: "https://github.com/JeshikoJ"
+      link: "https://github.com/jeshikoJ"
     }
   ];
 

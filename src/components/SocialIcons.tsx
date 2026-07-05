@@ -59,12 +59,12 @@ const SocialIcons = () => {
     <div className="icons-section">
       <div className="social-icons" data-cursor="icons" id="social">
         <span>
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/jeshikoJ" target="_blank">
             <FaGithub />
           </a>
         </span>
         <span>
-          <a href="https://www.linkedin.com/in/jeshiko-j/?isSelfProfile=true" target="_blank">
+          <a href="https://www.linkedin.com/in/jeshiko-j" target="_blank">
             <FaLinkedinIn />
           </a>
         </span>
@@ -74,7 +74,7 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="/resume.pdf?v=3" download="Jeshiko_J_Resume.pdf">
+      <a className="resume-button" href={`${import.meta.env.BASE_URL}resume.pdf?v=3`} download="Jeshiko_J_Resume.pdf">
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
