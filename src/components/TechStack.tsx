@@ -40,7 +40,7 @@ const TechStack = () => {
       
       <div className="tech-header">
         <div className="tech-hud-line"></div>
-        <h2 className="glitch" data-text="// SKILLS">// SKILLS</h2>
+        <h2 className="glitch" data-text="SKILLS">SKILLS</h2>
         <div className="tech-hud-line"></div>
       </div>
 

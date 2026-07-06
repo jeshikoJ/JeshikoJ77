@@ -119,16 +119,20 @@ export function setCharTimeline(
         .to(character.rotation, { x: -0.04, duration: 2, delay: 1 }, 0);
     }
   } else {
-    if (character) {
-      const tM2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".whatIDO",
-          start: "top 70%",
-          end: "bottom top",
-        },
-      });
-      tM2.to(".what-box-in", { display: "flex", duration: 0.1, delay: 0 }, 0);
+    // On mobile: always show .what-box-in regardless of character load state
+    const whatBoxIn = document.querySelector(".what-box-in") as HTMLElement | null;
+    if (whatBoxIn) {
+      whatBoxIn.style.display = "flex";
     }
+    const tM2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".whatIDO",
+        start: "top 80%",
+        end: "bottom top",
+        toggleActions: "play none none none",
+      },
+    });
+    tM2.to(".what-box-in", { display: "flex", duration: 0.01 }, 0);
   }
 }
 
