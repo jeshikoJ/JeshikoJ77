@@ -1,4 +1,4 @@
-import{j as P,r as bt}from"./index-BI62N2bn.js";import{g as St,S as yt}from"./ScrollTrigger-CiEuWA-R.js";/*!
+import{j as P,r as bt}from"./index-QqRQ8VxL.js";import{g as St,S as yt}from"./ScrollTrigger-CiEuWA-R.js";/*!
  * SplitText 3.15.0
  * https://gsap.com
  *
