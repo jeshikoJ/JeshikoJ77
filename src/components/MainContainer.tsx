@@ -34,12 +34,6 @@ const MainContainer = ({ children }: PropsWithChildren) => {
     handleResize();
     window.addEventListener("resize", handleResize);
 
-    import("./utils/initialFX").then((module) => {
-      if (module.initialFX) {
-        module.initialFX();
-      }
-    });
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
