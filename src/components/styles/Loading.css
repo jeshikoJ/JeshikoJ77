@@ -8,6 +8,11 @@
   display: flex;
   place-items: center;
   justify-content: center;
+  transition: opacity 0.8s ease-in-out;
+}
+.loading-screen-out {
+  opacity: 0;
+  pointer-events: none;
 }
 .loading-button {
   padding: 20px 50px;
@@ -192,6 +197,11 @@
   transform: translateX(-50%);
   top: 0;
   color: var(--backgroundColor);
+  transition: opacity 0.5s ease-in-out;
+}
+.loading-header-out {
+  opacity: 0;
+  pointer-events: none;
 }
 .loader-title {
   font-weight: 700;

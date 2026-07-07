@@ -14,7 +14,7 @@ const Loading = ({ percent }: { percent: number }) => {
     if (percent >= 100) {
       const timer = setTimeout(() => {
         setIsLoaded(true);
-      }, 2000);
+      }, 1000);
       return () => clearTimeout(timer);
     }
   }, [percent]);
@@ -44,7 +44,7 @@ const Loading = ({ percent }: { percent: number }) => {
 
   return (
     <>
-      <div className="loading-header">
+      <div className={`loading-header ${clicked && "loading-header-out"}`}>
         <a href="/#" className="loader-title" data-cursor="disable">
           JJ
         </a>
@@ -59,7 +59,7 @@ const Loading = ({ percent }: { percent: number }) => {
           </div>
         </div>
       </div>
-      <div className="loading-screen">
+      <div className={`loading-screen ${clicked && "loading-screen-out"}`}>
         <div className="loading-marquee">
           <Marquee>
             <span> A Creative Developer</span> <span>A Creative Designer</span>
