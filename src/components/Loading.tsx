@@ -14,7 +14,7 @@ const Loading = ({ percent }: { percent: number }) => {
     if (percent >= 100) {
       const timer = setTimeout(() => {
         setIsLoaded(true);
-      }, 800);
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, [percent]);
