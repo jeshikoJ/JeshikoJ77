@@ -14,7 +14,7 @@ const Loading = ({ percent }: { percent: number }) => {
     if (percent >= 100) {
       const timer = setTimeout(() => {
         setIsLoaded(true);
-      }, 1000);
+      }, 500);
       return () => clearTimeout(timer);
     }
   }, [percent]);
@@ -28,7 +28,7 @@ const Loading = ({ percent }: { percent: number }) => {
             module.initialFX();
           }
           setIsLoading(false);
-        }, 900);
+        }, 600);
       }
     });
   }, [isLoaded]);
