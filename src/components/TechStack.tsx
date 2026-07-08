@@ -7,7 +7,6 @@ import {
   SiExpress,
   SiMongodb,
   SiPostgresql,
-  SiSupabase,
   SiTypescript,
   SiJavascript,
   SiPython,
@@ -28,7 +27,6 @@ const techStackData = [
   { icon: SiExpress, name: "EXPRESS", category: "SERVER API", color: "#ffffff" },
   { icon: SiMongodb, name: "MONGODB", category: "NOSQL DB", color: "#47A248" },
   { icon: SiPostgresql, name: "POSTGRESQL", category: "RELATIONAL DB", color: "#4169E1" },
-  { icon: SiSupabase, name: "SUPABASE", category: "BAAS", color: "#3ECF8E" },
   { icon: SiTypescript, name: "TYPESCRIPT", category: "TYPE SYSTEM", color: "#3178C6" },
   { icon: SiJavascript, name: "JAVASCRIPT", category: "BASE LOGIC", color: "#F7DF1E" },
 ];

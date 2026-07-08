@@ -53,7 +53,7 @@ const Work = () => {
       title: "BiteFlow Ordering Engine",
       category: "Full-Stack Web Development",
       description: "A real-time restaurant ordering platform with live order tracking, Stripe payments, and a multi-tenant dashboard for restaurant owners.",
-      tools: "Node.js, Express.js, Supabase, PostgreSQL, Stripe, Vercel",
+      tools: "Node.js, Express.js, PostgreSQL, Stripe, Vercel",
       image: `${import.meta.env.BASE_URL}images/project_restaurant.jpg`,
       link: "https://github.com/jeshikoJ",
     },
