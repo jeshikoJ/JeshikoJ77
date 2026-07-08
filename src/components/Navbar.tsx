@@ -5,10 +5,14 @@ import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import "./styles/Navbar.css";
 
+import { useLoading } from "../context/LoadingProvider";
+
 gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
+  const { isLoading } = useLoading();
+
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -21,7 +25,7 @@ const Navbar = () => {
     });
 
     smoother.scrollTop(0);
-    smoother.paused(true);
+    smoother.paused(isLoading);
 
     let links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
@@ -39,6 +43,13 @@ const Navbar = () => {
       ScrollSmoother.refresh(true);
     });
   }, []);
+
+  useEffect(() => {
+    if (smoother) {
+      smoother.paused(isLoading);
+    }
+  }, [isLoading]);
+
   return (
     <>
       <div className="header">
