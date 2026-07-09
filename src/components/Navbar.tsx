@@ -14,24 +14,26 @@ const Navbar = () => {
   const { isLoading } = useLoading();
 
   useEffect(() => {
-    smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 0.8,
-      effects: true,
-      autoResize: true,
-      normalizeScroll: true,
-      ignoreMobileResize: true,
-    });
+    if (window.innerWidth > 1024) {
+      smoother = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 0.8,
+        effects: true,
+        autoResize: true,
+        normalizeScroll: true,
+        ignoreMobileResize: true,
+      });
 
-    smoother.scrollTop(0);
-    smoother.paused(isLoading);
+      smoother.scrollTop(0);
+      smoother.paused(isLoading);
+    }
 
     let links = document.querySelectorAll(".header ul a");
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth > 1024 && smoother) {
           e.preventDefault();
           let elem = e.currentTarget as HTMLAnchorElement;
           let section = elem.getAttribute("data-href");
@@ -40,7 +42,9 @@ const Navbar = () => {
       });
     });
     window.addEventListener("resize", () => {
-      ScrollSmoother.refresh(true);
+      if (ScrollSmoother.get()) {
+        ScrollSmoother.refresh(true);
+      }
     });
   }, []);
 
