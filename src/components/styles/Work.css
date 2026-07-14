@@ -284,6 +284,11 @@
     height: auto;
     padding-bottom: 50px;
   }
+  .work-section h2 {
+    font-size: clamp(32px, 5vw, 44px);
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
   .work-image img {
     max-height: 220px;
     width: 100%;

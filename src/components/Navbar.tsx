@@ -21,7 +21,7 @@ const Navbar = () => {
         smooth: 0.8,
         effects: true,
         autoResize: true,
-        normalizeScroll: true,
+        normalizeScroll: false,
         ignoreMobileResize: true,
       });
 
