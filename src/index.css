@@ -74,6 +74,11 @@ body {
   margin: auto;
   position: relative;
 }
+#smooth-content {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 .container1 {
   width: var(--cWidth);
   height: var(--vh);
